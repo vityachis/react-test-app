@@ -6,6 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>React Test App</title>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
+    <style>
+        @keyframes loading {
+            0% {
+                content: '';
+            }
+            33% {
+                content: '.';
+            }
+            66% {
+                content: '..';
+            }
+            100% {
+                content: '...';
+            }
+        }
+        .loading {
+            font-family: serif;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        .loading:after {
+            content: '';
+            -webkit-animation: 1.5s linear 0s infinite loading;
+            animation: 1.5s linear 0s infinite loading;
+        }
+    </style>
 </head>
 <body>
 <noscript>You need to enable JavaScript to run this app.</noscript>
